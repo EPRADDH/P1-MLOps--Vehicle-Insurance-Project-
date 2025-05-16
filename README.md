@@ -121,3 +121,5 @@ FastAPI app hosted on EC2 public IP (Port 5080).
 Data Ingestion ➔ Data Validation ➔ Data Transformation
              ➔ Model Training ➔ Model Evaluation ➔ Model Deployment
              ➔ CI/CD Automation with GitHub Actions, Docker & AWS
+
+---------------------------------------------------------------------
