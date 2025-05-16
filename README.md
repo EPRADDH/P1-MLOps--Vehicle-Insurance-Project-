@@ -1,53 +1,109 @@
 # P1-MLOps--Vehicle-Insurance-Project-
-this project is for E2E vehicle insurance project with basic MLops 
+
+Welcome to this MLOps project, designed to demonstrate a robust pipeline for managing vehicle insurance data
+
+Key Features
+📦 Project Templating: Auto-generated structure using template.py
+🐍 Python Virtual Environment: Easily setup with conda
+🧪 Modular ML Pipeline: Clean separation of concerns — ingestion, transformation, training, evaluation
+🌐 MongoDB Atlas Integration: Centralized and scalable NoSQL storage
+🔒 Custom Logging & Exception Handling
+📊 EDA & Feature Engineering: Notebook-ready analysis
+📥 Data Ingestion via MongoDB ➜ Pandas
+✅ Data Validation with Schema YAML
+🔄 Data Transformation + Model Training
+☁️ AWS S3 for Model Registry
+🧠 Model Evaluation + Conditional Model Push
+🧾 Prediction API with FastAPI/Flask
+🐳 Dockerized App + .dockerignore
+⚙️ CI/CD using GitHub Actions + AWS ECR + EC2
+🔐 IAM Role Management for secure access
 
 
-----------------------------------------------------------------------------------------------
-requiremnt.text 
+Project Workflow
+✅ Phase 1: Project Setup
+Set up modular Python structure with template.py.
 
-Here’s a one-line purpose description for each of the listed modules:
+Configure setup.py and pyproject.toml for package installation.
 
-ipykernel – Provides the IPython kernel for Jupyter, enabling code execution in notebooks.
+Create virtual environment: conda create -n vehicle python=3.10
 
-pandas – Offers data structures and functions for efficient data manipulation and analysis.
+Install all dependencies via requirements.txt.
 
-numpy – Supports large, multi-dimensional arrays and matrices, along with mathematical functions.
+✅ Phase 2: MongoDB Integration
+Use MongoDB Atlas to store raw data.
+Step 1: MongoDB Atlas Configuration
+Sign up for MongoDB Atlas and create a new project.
+Set up a free M0 cluster, configure the username and password, and allow access from any IP address (0.0.0.0/0).
+Retrieve the MongoDB connection string for Python and save it (replace <password> with your password).
+Step 2: Pushing Data to MongoDB
+Create a folder named notebook, add the dataset, and create a notebook file mongoDB_demo.ipynb.
+Use the notebook to push data to the MongoDB database.
+Verify the data in MongoDB Atlas under Database > Browse Collections.
 
-matplotlib – A plotting library for creating static, animated, and interactive visualizations in Python.
+✅ Phase 3: Logging & Exception Handling
+Implement centralized logging using logger.py.
 
-plotly – Enables interactive, web-based graphing and visualizations.
+Handle custom exceptions with exception.py.
 
-seaborn – Provides a high-level interface for creating attractive and informative statistical graphics.
+✅ Phase 4: Data Pipeline (ETL)
+Data Ingestion
 
-scikit-learn – A machine learning library for Python offering tools for classification, regression, clustering, and more.
+Connect to MongoDB, retrieve datasets, and save locally.
 
-pymongo – Python driver for MongoDB, enabling interaction with MongoDB databases.
+Data Validation
 
-from_root – (Assumed typo or custom module; no standard module named from_root) — Possibly used for root-path relative imports in a project.
+Validate schema using schema.yaml.
 
-dill – Extends Python’s pickle module for serializing more complex Python objects.
+Data Transformation
 
-certifi – Provides Mozilla’s curated collection of Root Certificates for validating HTTPS requests.
+Clean and transform features for model input.
 
-PyYAML – A YAML parser and emitter for Python, used for reading and writing YAML files.
+✅ Phase 5: Model Training & Evaluation
+Use Scikit-learn models and transformers.
 
-boto3 – Amazon Web Services (AWS) SDK for Python to interact with AWS services.
+Evaluate models using thresholds defined in constants.
 
-mypy-boto3-s3 – Type annotations for boto3 S3 client to support static type checking with mypy.
+Save models as serialized .pkl objects using dill.
 
-botocore – Core functionality for boto3, handling low-level AWS service access.
+✅ Phase 6: AWS Integration
+Upload trained models to AWS S3.
 
-fastapi – A modern, fast (high-performance) web framework for building APIs with Python.
+Use IAM roles and secure keys for access.
 
-python-multipart – Parses multipart/form-data, commonly used for file uploads in web APIs.
+Store and version model artifacts in S3 buckets.
 
-uvicorn – A lightning-fast ASGI server used to run FastAPI and other async web apps.
+✅ Phase 7: Model Deployment
+Build a FastAPI app to serve predictions.
 
-jinja2 – A templating engine for Python, commonly used for rendering HTML templates.
+Routes:
 
-imblearn – Provides tools for handling imbalanced datasets, including over- and under-sampling.
+/ → Homepage
 
--e . – Installs the current package in editable mode, useful for development and live changes.
+/predict → Vehicle insurance prediction
 
+/train → Trigger model training pipeline
 
-------------------------------------------------------------------------------------------
+✅ Phase 8: CI/CD with GitHub Actions & AWS EC2
+Setup GitHub Actions with AWS secrets.
+
+Use Docker to containerize the application.
+
+Use AWS EC2 (Ubuntu) as a self-hosted GitHub runner.
+
+CI/CD flow:
+
+Code pushed to GitHub.
+
+GitHub Action triggers.
+
+Docker image pushed to AWS ECR.
+
+Image deployed to EC2 instance.
+
+FastAPI app hosted on EC2 public IP (Port 5080).
+
+🎯 Project Workflow Summary
+Data Ingestion ➔ Data Validation ➔ Data Transformation
+             ➔ Model Training ➔ Model Evaluation ➔ Model Deployment
+             ➔ CI/CD Automation with GitHub Actions, Docker & AWS
