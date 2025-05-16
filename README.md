@@ -1,5 +1,5 @@
-
-<<<<<<< HEAD
+****MLOps--Vehicle-Insurance-Projec****
+Welcome to this MLOps project, designed to demonstrate a robust pipeline for managing vehicle insurance data
 
 Key Features
 📦 Project Templating: Auto-generated structure using template.py
@@ -104,7 +104,7 @@ Use Docker to containerize the application.
 
 Use AWS EC2 (Ubuntu) as a self-hosted GitHub runner.
 
-CI/CD flow:
+**CI/CD flow:**
 
 Code pushed to GitHub.
 
@@ -121,6 +121,4 @@ Data Ingestion ➔ Data Validation ➔ Data Transformation
              ➔ Model Training ➔ Model Evaluation ➔ Model Deployment
              ➔ CI/CD Automation with GitHub Actions, Docker & AWS
 
----------------------------------------------------------------------
-=======
->>>>>>> cfc24f98670431f053d6e525ebbe53ed271c5e0e
+
