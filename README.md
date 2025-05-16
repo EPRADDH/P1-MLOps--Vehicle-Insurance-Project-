@@ -1,6 +1,5 @@
-# P1-MLOps--Vehicle-Insurance-Project-
-this project is for E2E vehicle insurance project with basic MLops 
 
+<<<<<<< HEAD
 
 Key Features
 📦 Project Templating: Auto-generated structure using template.py
@@ -123,3 +122,5 @@ Data Ingestion ➔ Data Validation ➔ Data Transformation
              ➔ CI/CD Automation with GitHub Actions, Docker & AWS
 
 ---------------------------------------------------------------------
+=======
+>>>>>>> cfc24f98670431f053d6e525ebbe53ed271c5e0e
