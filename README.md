@@ -122,3 +122,11 @@ Data Ingestion ➔ Data Validation ➔ Data Transformation
              ➔ CI/CD Automation with GitHub Actions, Docker & AWS
 
 
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/faf42480-2166-4acd-a96d-d5eb3ab11e3f)
+
